@@ -1,14 +1,14 @@
 # covid19hospital.github.io
 Title of the Project: Corona Information Corner
 Description: Our application aims to bring all the possible utilities and quench the curiosity of the people while under lockdown due to corona under one platform. 
-Nobody wants to keep separate to access necessary functionality during time of emergency. There are 100’s of useful apps to help us through this time of turmoil,
-What if had many such useful features on the same app? This is exactly what our app gives the user features that might come in.
+Nobody wants to keep separate apps to access necessary functionality during time of emergency. There are 100’s of useful apps to help us through this time of turmoil,
+What if had many such useful features on the same app? This is exactly what our app gives the user features that might come in handy for;
 
 
 
 Daily Use:
 •	Fake news Verification:   with number of rumours making rounds on the internet it is important to be informed about news that is fake. The app allows you to view the fake news 
-                             and also to report news that might be fake, this will be cross verified by the authorities before being uploaded.
+                             and also to report news that might be fake, the reported news  will be cross verified by the authorities before being uploaded.
                             
 •	Shops trackers:  Since it is difficult for the people to go outside and buy groceries .Using our app we redirect it some online groceries facilities like BigBasket who will deliver
                     at your doorstep with no contact delivery.
@@ -54,8 +54,10 @@ Software Requirements:
 
 •	JavaScript: JavaScript is a client scripting language which is used for creating web pages.
               It is a standalone language developed in Netscape.Here in our application it is used to get the distance and direction between user and hospital and process as required
+              
+Flowcharts:
 
-![figure1](https://user-images.githubusercontent.com/59434228/79004908-4eb28800-7b73-11ea-973a-33405675e2da.jpeg)
+![WhatsApp Image 2020-04-10 at 10 30 21 PM](https://user-images.githubusercontent.com/59434228/79008396-f1bad000-7b7a-11ea-9d4f-55959a7e8a3e.jpeg)
 
 ![figure3](https://user-images.githubusercontent.com/59434228/79005071-b7016980-7b73-11ea-9e12-cae0d4b64501.jpeg)
 
