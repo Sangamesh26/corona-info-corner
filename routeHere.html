@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	  <meta charset="utf-8">
+      <meta content="width=device-width, initial-scale=1.0" name="viewport">
+	  
+	   <title>Map routes</title>
+       <meta content="" name="descriptison">
+        <meta content="" name="keywords">
+		
+		<!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,400,500,600,700" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="assets/vendor/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+<link href="assets/css/style.css" rel="stylesheet">
+		
+		
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css" />
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
+        <script src="https://www.mapquestapi.com/sdk/leaflet/v2.2/mq-map.js?key=lYrP4vF3Uk5zgTiGGuEzQGwGIVDGuy24"></script>
+        <script src="https://www.mapquestapi.com/sdk/leaflet/v2.2/mq-routing.js?key=lYrP4vF3Uk5zgTiGGuEzQGwGIVDGuy24"></script>
+
+        <script type="text/javascript">
+            function myFunction() {
+
+                var map,
+                    dir;
+                var source,destination;
+				source=document.getElementById("location1").value;
+				destination=document.getElementById("location2").value;
+                map = L.map('map', {
+                    layers: MQ.mapLayer(),
+                    center: [ 12.9716, 77.5946 ],
+                    zoom: 9
+                });
+
+                dir = MQ.routing.directions();
+
+                dir.route({
+                    locations: [
+                        source,
+                        destination
+                    ],
+                    options: {
+                        avoids: ['toll road'],
+                        routeControlPointCollection:[
+                            { lat: 39.711213, lng: -104.819356, weight: 5, radius: 3 }
+                        ]
+                    }
+                });
+
+                map.addLayer(MQ.routing.routeLayer({
+                    directions: dir,
+                    fitBounds: true
+                }));
+            }
+        </script>
+    </head>
+
+    <body>
+
+	  
+	  <section id="portfolio" class="portfolio section-bg">
+      <div class="container">
+
+        <header class="section-header">
+          <h3 class="section-title">Route Finder !!!</h3>
+        </header>
+
+        <div class="row">
+          <div class="col-lg-12">
+             	<div>
+	    <form>
+		<input type="text" id="location1" value="" placeholder="Your source">
+		</form>
+		<form>
+		<input type="text" id="location2" value="" placeholder="Your Destination">
+		</form>
+	    <button id="btnMaps" onclick="myFunction();">Give Route</button>
+	 </div>
+      <div id='map' style='width: 90%; height:400px;'></div>
+	
+          </div>
+		 
+        </div>
+
+
+      </div>
+    </section>
+    </body>
+</html>
