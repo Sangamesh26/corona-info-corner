@@ -1,4 +1,4 @@
-# covid19hospital.github.io
+# corona info corner
 Title of the Project: Corona Information Corner
 Description: Our application aims to bring all the possible utilities and quench the curiosity of the people while under lockdown due to corona under one platform. 
 Nobody wants to keep separate apps to access necessary functionality during time of emergency. There are 100’s of useful apps to help us through this time of turmoil,
